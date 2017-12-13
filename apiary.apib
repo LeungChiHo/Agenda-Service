@@ -2,26 +2,15 @@ FORMAT: 1A
 
 # Agenda
 
-Agenda is a simple API allowing consumers to schedule meeting online.
+Agenda is a local cli program allowing you to schedule your meetings online on our server.
 
 # Group User
 
-## User-Key [/v1/key]
+## User [/v1/user]
 
-### Get user key [GET /v1/key{?username,password}]
+### UserRegister [POST]
 
-
-+ Parameters
-    - username : `zhang3` (string, required) - User Name
-    - password : `123` (required) - Password
-
-+ Response 200 (application/json)
-
-        {
-            "key":"6384e2b2184bcbf58eccf10ca7a6563c"
-        }
-        
-### Create a New User [POST]
+Register a new user: "register -u [UserName] -p [Pass] -e [Email] -t [Phone]"
 
 + Request (application/json)
 
@@ -44,15 +33,18 @@ Agenda is a simple API allowing consumers to schedule meeting online.
                 "email":"li4@163.com",
                 "phone":"123"
             }
+            
+### UserDelete [DELETE]
 
-# Group Users
+To delete your account in Agenda: "delete"
 
-## Users Collection [/v1/users{?key}]
++ Response 204
 
-+ Parameters
-    - key : `6384e2b2184bcbf58eccf10ca7a6563c` (string, required)
+## Users [/v1/users]
 
-### List Users [GET]
+### ListALLUsers [GET]
+
+Show all users: "users"
 
 + Response 200 (application/json)
 
@@ -74,40 +66,15 @@ Agenda is a simple API allowing consumers to schedule meeting online.
             }
         ]
 
-### Delete User [DELETE]
-    
-+ Response 204
 
-# Group Meetings
+# Group Meeting
 
-## Meetings Collection [/v1/meetings{?key}]
+## Meeting [/v1/meeting]
 
-+ Parameters
-    - key : `6384e2b2184bcbf58eccf10ca7a6563c` (string, required)
+### MeetingCreate [POST]
 
-### List all meetings [GET]
 
-+ Response 200 (application/json)
-
-        [
-            {
-                "id":1,
-                "title":"Meeting-one",
-                "host":"zhang3",
-                "members":["li4"],
-                "starttime":"2000/01/01/00:00",
-                "endtime":"2001/01/01/00:00"
-            },{
-                "id":2,
-                "title":"Meeting-two",
-                "host":"li4",
-                "members":["zhang3", "wang5"],
-                "starttime":"2002/01/01/00:00",
-                "endtime":"2003/01/01/00:00"
-            }
-        ]
-
-### Create a meeting [POST]
+To create a new meeting:  "create -t [Title] -p [Participator] -s [StartTime] -e [EndTime]"
 
 + Request (application/json)
 
@@ -130,4 +97,33 @@ Agenda is a simple API allowing consumers to schedule meeting online.
                 "starttime":"2004/01/01/00:00",
                 "endtime":"2005/01/01/00:00"
             }
+            
+
+## Meetings [/v1/meetings]
+
+### ListAllMeetings [GET]
+
+Show all meetings: "meetings"
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id":1,
+                "title":"Meeting-one",
+                "host":"zhang3",
+                "members":["li4"],
+                "starttime":"2000/01/01/00:00",
+                "endtime":"2001/01/01/00:00"
+            },{
+                "id":2,
+                "title":"Meeting-two",
+                "host":"li4",
+                "members":["zhang3", "wang5"],
+                "starttime":"2002/01/01/00:00",
+                "endtime":"2003/01/01/00:00"
+            }
+        ]
+
+
 
