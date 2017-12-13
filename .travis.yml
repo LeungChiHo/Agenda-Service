@@ -8,3 +8,7 @@ go:
   - go build cli/main.go
   - go test ./service/entity
   - go test ./cli/cmd
+
+  branches:
+  only:
+    - master
