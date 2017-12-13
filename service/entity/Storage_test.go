@@ -70,7 +70,7 @@ func TestQueryMeeting(t *testing.T) {
     for _, c := range cases {
         got := queryMeeting(c.in)
         if !reflect.DeepEqual(got, c.want)  {
-            t.Errorf("queryMeeting(%q) == %q, want %q", c.in, got, c.want)
+            t.Errorf("queryMeeting() == %q, want %q", got, c.want)
         }
     }
 }
@@ -87,7 +87,7 @@ func TestQueryUser(t *testing.T) {
     for _, c := range cases {
         got := queryUser(c.in)
         if !reflect.DeepEqual(got, c.want)  {
-            t.Errorf("queryMeeting(%q) == %q, want %q", c.in, got, c.want)
+            t.Errorf("queryMeeting() == %q, want %q", got, c.want)
         }
     }
 }
@@ -128,7 +128,7 @@ func TestDeleteUser(t *testing.T) {
         deleteUser(c.in)
         fmt.Printf("userlist: %v\n", userlist)
         if got := userlist; !reflect.DeepEqual(got, c.want)  {
-            t.Errorf("DeleteUser(%q) == %q, want %q", c.in, got, c.want)
+            t.Errorf("DeleteUser() == %q, want %q", got, c.want)
         }
     }
 }
@@ -147,7 +147,7 @@ func TestDeleteMeeting(t *testing.T) {
         deleteMeeting(c.in)
         fmt.Printf("meetinglist: %v\n", meetinglist)
         if got := meetinglist; !reflect.DeepEqual(got, c.want)  {
-            t.Errorf("DeleteMeeting(%q) == %q, want %q", c.in, got, c.want)
+            t.Errorf("DeleteMeeting() == %q, want %q", got, c.want)
         }
     }
 }
