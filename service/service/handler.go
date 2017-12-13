@@ -1,7 +1,7 @@
 package service
 import (
 	"net/http"
-    "github.com/LeungChiHo/Agenda-Service/service/entity"
+    entity "github.com/LeungChiHo/Agenda-Service/service/entity"
 	"github.com/unrolled/render"
 	"fmt"
 	"github.com/gorilla/mux"

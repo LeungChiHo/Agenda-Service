@@ -44,5 +44,5 @@ func TestShowAllMeetings(t *testing.T) {
 func TestUserDelete(t *testing.T) {
 	fmt.Println("=====> In TEST of UserDelete")
 	UserDeleteCmd.Run(UserDeleteCmd, nil)
-	UserDeleteCmd.Run(usersCmd, nil)
+	//usersCmd.Run(usersCmd, nil)
 }
