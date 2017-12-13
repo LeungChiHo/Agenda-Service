@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"Agenda-Service/entity"
+	"Agenda-Service/service/entity"
 
 	"github.com/spf13/cobra"
 )

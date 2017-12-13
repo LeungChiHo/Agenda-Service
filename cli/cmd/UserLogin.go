@@ -46,7 +46,7 @@ If forget the PassWord,you must register another one User`,
 		if res.StatusCode != 200 {
 			fmt.Println("Login failed.")
 		} else {
-			fmt.Print("Login successfully!\n username:")
+			fmt.Print("Login successfully!\nusername:")
 			fmt.Println(username)
 		}
 	  },
