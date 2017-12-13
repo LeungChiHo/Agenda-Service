@@ -1,14 +1,6 @@
 language: go
 
 go:
-  - tip # The latest version of Go.
+    - tip
 
-  script:
-  - go build service/main.go
-  - go build cli/main.go
-  - go test ./service/entity
-  - go test ./cli/cmd
-
-  branches:
-  only:
-    - master
+go_import_path: github.com/LeungChiHo/Agenda-Service
