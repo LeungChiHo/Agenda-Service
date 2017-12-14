@@ -4,3 +4,4 @@ RUN cd "$GOPATH/src/github.com/LeungChiHo/Agenda-Service/cli" && go get -v && go
 RUN cd "$GOPATH/src/github.com/LeungChiHo/Agenda-Service/service" && go get -v && go install -v
 WORKDIR /
 EXPOSE 8080
+VOLUME ["/data"]
