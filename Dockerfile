@@ -1,5 +1,5 @@
 FROM golang:1.8
-COPY . "$GOPATH/srcgithub.com/LeungChiHo/Agenda-Service"
+COPY . "$GOPATH/src/github.com/LeungChiHo/Agenda-Service"
 RUN cd "$GOPATH/src/github.com/LeungChiHo/Agenda-Service/cli" && go get -v && go install -v
 RUN cd "$GOPATH/src/github.com/LeungChiHo/Agenda-Service/service" && go get -v && go install -v
 WORKDIR /
