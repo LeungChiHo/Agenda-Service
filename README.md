@@ -1,4 +1,4 @@
-# Agenda-Service
+﻿# Agenda-Service
 ![Image text](https://www.travis-ci.org/LeungChiHo/Agenda-Service.svg?branch=master )
 # API
 
@@ -8,6 +8,16 @@
 ![Image text](https://github.com/retoruto/Agenda-Service/blob/master/photos/3.png)
 ![Image text](https://github.com/retoruto/Agenda-Service/blob/master/photos/6.png)
 ![Image text](https://github.com/retoruto/Agenda-Service/blob/master/photos/5.png)
+
+# 镜像构建与下载
+在Docker Hub上关联github项目之后进行自动构建镜像
+![0](https://raw.githubusercontent.com/LeungChiHo/Agenda-Service/master/screenshot/0.png)
+
+下载镜像
+![1](https://raw.githubusercontent.com/LeungChiHo/Agenda-Service/master/screenshot/1.png)
+
+启动服务器
+![2](https://raw.githubusercontent.com/LeungChiHo/Agenda-Service/master/screenshot/2.png)
 
 # 功能测试
 
@@ -187,7 +197,10 @@ $ ./agenda meetings
 ```
 
 # Go Test
+
+
 **使用cmd_test测试：**
+同时在上传github前将客户端的host改为`https://private-c9f16-retokani.apiary-mock.com`以进行mock测试
 ```
 $ go test
 =====> In TEST of UserRegister
